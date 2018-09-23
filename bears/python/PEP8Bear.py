@@ -28,6 +28,7 @@ class PEP8Bear(LocalBear):
             local_pep8_config: bool = False,
             ):
         """
+
         Detects and fixes PEP8 incompliant code. This bear will not change
         functionality of the code in any way.
 
@@ -57,5 +58,5 @@ class PEP8Bear(LocalBear):
         for diff in diffs:
             yield Result(self,
                          'The code does not comply to PEP8.',
-                         affected_code=(diff.range(filename),),
-                         diffs={filename: diff})
+                          affected_code=(diff.range(filename),),
+                          diffs={filename: diff})
